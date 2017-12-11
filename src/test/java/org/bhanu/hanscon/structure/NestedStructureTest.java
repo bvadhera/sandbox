@@ -3,11 +3,16 @@ package org.bhanu.hanscon.structure;
 import org.junit.Test;
 
 /**
- * Created by ralmonte on 12/10/17.
+ * Created by bvadhera on 12/11/17.
+ * 1 control structure from nested for loops.
  */
 public class NestedStructureTest {
 
     @Test
+    /**
+     * This control structure is nested for loops.
+     * where dots (.) are decrementing but numbers are incrementing.
+     */
     public void checkNestedStructure() {
         for (int i = 1; i <= 5; i++) {
             for (int j = 1; j <= (5 - i); j++) {
@@ -20,6 +25,14 @@ public class NestedStructureTest {
         }
     }
 
+    /**
+     * Prints rhe text for both cases when dots are decrementing but numbers are incrementing.
+     * @param arg1 size - variable size
+     * @param arg2 count - the count for which we have to print.
+     * @param arg3 text - the actual text
+     * @param arg4 incremented - boolean value to decide if we are incrementing or decrementing
+     *             the text
+     */
     void printText(Integer size, Integer count, String text, Boolean incremented) {
         if (incremented) {
             for (int i = 0; i < count; i++) {
@@ -34,11 +47,15 @@ public class NestedStructureTest {
     }
 
     @Test
+    /**
+     * Rewriting This control structure to only use 1 control structure
+     * where dots (.) are decrementing but numbers are incrementing.
+     */
     public void checkNestedStructureWithStream() {
-        final int size = 6;
-        for (int i = 1; i <= size; i++) {
-            printText(size, i, ".", false);
-            printText(size, i, "" + i, true);
+        final int n = 6;
+        for (int i = 1; i <= n; i++) {
+            printText(n, i, ".", false);
+            printText(n, i, "" + i, true);
             System.out.println();
         }
     }
